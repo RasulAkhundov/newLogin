@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <% include ../parts/head %>
+
+<body>
+    <img src="../img/wave.png" alt="" id="wave">
+    <div class="container">
+        <div class="img">
+            <img src="../img/phone.svg" alt="">
+        </div>
+        <div class="login-container">
+            <img src="../img/avatar.svg" alt="">
+            <h1>Welcome</h1>
+            <div class="input-1">
+                <label for="email"></label>
+                <input type="text" placeholder="Email" name="email" id="email">
+                <i class="fas fa-envelope"></i>
+            </div>
+            <div class="input-1">
+                <label for="user"></label>
+                <input type="text" placeholder="Username" name="user" id="username">
+                <i class="fas fa-user"></i>
+            </div>
+            <div class="input-2">
+                <label for="parol"></label>
+                <input type="password" placeholder="Password" name="parol" id="password">
+                <i class="fas fa-lock"></i>
+            </div>
+            <div class="input-3">
+                <label for="parol"></label>
+                <input type="password" placeholder="Password" name="parol" id="password-2">
+                <i class="fas fa-lock"></i>
+            </div>
+            <div class="forgot-pass">
+                <a href="../login.html"><small>Login</small></a>
+            </div>
+            <button type="button" id="login">Register</button>
+        </div>
+    </div>
+    <dialog class="dialog">
+        <img src="./img/forgot.svg" alt="">
+        <div class="verify">
+            <input type="email" placeholder="Verify your E-Mail pleace" id="mail">
+            <button type="button" id="send">SEND</button>
+        </div>
+        <div class="x">
+            <div class="line-1"></div>
+            <div class="line-2"></div>
+        </div>
+    </dialog>
+
+</body>
+
+</html>
