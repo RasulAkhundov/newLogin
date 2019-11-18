@@ -6,6 +6,7 @@ const mongoose = require("mongoose");
 // routerler
 const authRouter = require("./routes/auth");
 // resul salam
+// merge text
 // middleware
 app.set("view engine", "ejs");
 app.use(require("express").static("public"));
