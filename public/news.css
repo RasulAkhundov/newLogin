@@ -12,10 +12,14 @@ body {
   background: whitesmoke;
   padding: 20px;
 }
+.container-news {
+  display: flex;
+}
 .card-container {
   width: 350px;
   border: 1px solid silver;
   border-radius: 5px;
+  margin: 15px;
 }
 .card-container .image {
   width: 100%;

@@ -1,25 +1,24 @@
 $(document).ready(function() {
+  let formData = {};
 
-    let formData = {};
-    
-    $('.form-container-flex button').on("click", async function() {
+  $(".form-container-flex button").on("click", async function() {
+    formData.title = $('.form-container-flex input[name="title"]').val();
+    formData.author = $('.form-container-flex input[name="author"]').val();
+    formData.img = $('.form-container-flex input[name="img"]').val();
+    formData.desc = $(
+      '.form-container-flex textarea[name="description"]'
+    ).val();
 
-      formData.title = $('.form-container-flex input[name="title"]').val();
-      formData.author = $('.form-container-flex input[name="author"]').val();
-      formData.img = $('.form-container-flex input[name="img"]').val();
-      formData.desc = $('.form-container-flex textarea[name="description"]').val();
+    let article = await axios
+      .post("http://localhost:4004/api/create-news", formData)
+      .then(res => {
+        window.location.href = "/news";
+        return res.data;
+      })
+      .catch(err => {
+        console.log("error from api", err);
+      });
 
-
-      let article = await axios.post("http://localhost:4004/api/create-news", formData)
-        .then(res => {
-          return res.data
-        })
-        .catch(err => {
-          console.log('error from api', err)
-        })
-
-      console.log(article)  
-
-    })
-
-})
+    console.log(article);
+  });
+});
