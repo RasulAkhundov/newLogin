@@ -22,7 +22,7 @@ body {
 .container {
   display: flex;
   width: 700px;
-  justify-content: space-around;
+  justify-content: center;
 }
 .img {
   display: flex;
@@ -53,15 +53,7 @@ body {
   margin-bottom: 20px;
 }
 .login-container .input-1 input,
-.login-container .input-2 input {
-  width: 250px;
-  height: 40px;
-  padding: 5px 10px 5px 40px;
-  border: 0;
-  border-bottom: 2px solid #38d39f;
-  outline: none;
-  font-size: 16px;
-}
+.login-container .input-2 input,
 .login-container .input-3 input {
   width: 250px;
   height: 40px;
@@ -70,6 +62,7 @@ body {
   border-bottom: 2px solid #38d39f;
   outline: none;
   font-size: 16px;
+  background: transparent;
 }
 .login-container .input-1 i,
 .login-container .input-2 i,
@@ -112,7 +105,6 @@ body {
 dialog {
   width: 500px;
   height: 300px;
-  box-shadow: 0 0 20px black;
   position: fixed;
   top: 50%;
   left: 50%;
@@ -122,7 +114,7 @@ dialog {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  border: 0;
+  border: 1px solid silver;
   transform: scale(0);
 }
 .dialog-open {

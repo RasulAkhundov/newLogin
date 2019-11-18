@@ -22,11 +22,11 @@ app.use("/api", newsRouter);
 
 // tapilmayan routerler uchun
 app.get("/", (req, res) => {
-  res.render("login");
+  res.render("register");
 });
 
-app.get("/register", (req, res) => {
-  res.render("register");
+app.get("/login", (req, res) => {
+  res.render("login");
 });
 
 app.get("/news", (req, res) => {

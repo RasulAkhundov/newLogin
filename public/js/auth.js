@@ -21,7 +21,7 @@ $(document).ready(function() {
             const token = await axios.post("http://localhost:4004/api/register", formData).then(res => res.data);
             if (token.user) {
                 localStorage.setItem("user", token.user)
-                window.location.href = "/news"
+                window.location.href = "/login"
             } else {
                 console.log(token)
             }
@@ -36,7 +36,7 @@ $(document).ready(function() {
             const token = await axios.post("http://localhost:4004/api/login", formData).then(res => res.data);
             if (token.user) {
                 localStorage.setItem("user", token.user)
-                window.location.href = "/news"
+                window.location.href = "/news-form"
             } else {
                 console.log(token)
             }

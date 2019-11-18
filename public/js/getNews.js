@@ -6,6 +6,10 @@ $(document).ready(async function() {
   news.map(n => {
     $(".container-news").append(`
         <div class="card-container">
+        <div class="X">
+          <div class="line-1"></div>
+          <div class="line-2"></div>
+        </div>
         <div class="image">
         <img
             src="${n.image}"
@@ -25,4 +29,10 @@ $(document).ready(async function() {
         </div>
     `);
   });
+  $(".X").click(function() {
+    $("dialog").addClass('alert');
+  })
+  $("#no").click(function() {
+    $("dialog").removeClass('alert');
+  })
 });

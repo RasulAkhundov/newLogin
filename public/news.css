@@ -9,17 +9,103 @@ body {
   width: 100%;
   height: 100%;
   margin: 0;
+  background: white;
+}
+header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 30px;
   background: whitesmoke;
-  padding: 20px;
+}
+header h2 {
+  font-size: 44px;
+  color: rgb(236, 34, 34);
+}
+header h1 {
+  font-size: 50px;
+  color: #151515;
+}
+header ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+header ul li {
+  list-style: none;
+  text-decoration: none;
+  font-size: 16px;
+  margin-right: 20px;
+  display: flex;
+  align-items: center;
+}
+header ul li i {
+  margin-right: 5px;
+  font-size: 15px;
+}
+header ul li a {
+  color: #151515;
+  font-weight: 600;
+  text-decoration: none;
+}
+header .header-links {
+  display: flex;
+}
+header button {
+  width: 100px;
+  height: 40px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  outline: none;
+}
+header #singup {
+  background: transparent;
+  border: 2px solid rgb(236, 34, 34);
+  border-radius: 5px;
+  margin-right: 10px;
+}
+header #singin {
+  background: rgb(236, 34, 34);
+  border: 2px solid whitesmoke;
+  border-radius: 7px;
+  margin-right: 10px;
+  color: white;
 }
 .container-news {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 .card-container {
   width: 350px;
   border: 1px solid silver;
   border-radius: 5px;
   margin: 15px;
+  position: relative;
+}
+.card-container .X {
+  position: absolute;
+  top: 15px;
+  right: 5px;
+  cursor: pointer;
+}
+.card-container .X .line-1, .card-container .X .line-2 {
+  width: 30px;
+  height: 5px;
+  margin: 5px;
+  background: rgb(236, 34, 34);
+  border-radius: 50px;
+  cursor: pointer;
+}
+.card-container .X .line-1 {
+  transform: rotate(135deg);
+}
+.card-container .X .line-2 {
+  transform: rotate(-135deg);
+  position: absolute;
+  top: 0;
 }
 .card-container .image {
   width: 100%;
@@ -47,4 +133,35 @@ body {
 .card-body .about-news p {
   font-size: 14px;
   color: #151515;
+}
+.alert {
+  width: 400px;
+  height: 250px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid silver;
+  padding: 15px;
+  border-radius: 5px;
+}
+.alert span {
+  font-size: 20px;
+  color: #151515;
+  margin-bottom: 30px;
+}
+.alert button {
+  width: 100px;
+  height: 40px;
+  background: silver;
+  font-size: 16px;
+  color: #151515;
+  font-weight: 600;
+  cursor: pointer;
+  outline: none;
 }
