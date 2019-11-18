@@ -5,7 +5,7 @@ const mongoose = require("mongoose");
 
 // routerler
 const authRouter = require("./routes/auth");
-
+// resul salam
 // middleware
 app.set("view engine", "ejs");
 app.use(require("express").static("public"));
