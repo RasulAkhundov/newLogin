@@ -5,6 +5,7 @@ const mongoose = require("mongoose");
 
 // routerler
 const authRouter = require("./routes/auth");
+const newsRouter = require("./routes/news");
 // resul salam
 // merge text
 // middleware
@@ -17,6 +18,7 @@ console.log("salam");
 
 // router init
 app.use("/api", authRouter);
+app.use("/api", newsRouter);
 
 // tapilmayan routerler uchun
 app.get("/", (req, res) => {
@@ -29,10 +31,6 @@ app.get("/register", (req, res) => {
 
 app.get("/news", (req, res) => {
   res.render("news");
-});
-
-app.get("/news", (req, res) => {
-  res.render("news")
 });
 
 app.get("/news-form", (req, res) => {

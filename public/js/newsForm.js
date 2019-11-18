@@ -9,9 +9,12 @@ $(document).ready(function() {
       formData.desc = $('.form-container-flex textarea[name="description"]').val();
 
 
-      let article = await axios.post("http://localhost:4004/api .... ", formData)
+      let article = await axios.post("http://localhost:4004/api/create-news", formData)
         .then(res => {
           return res.data
+        })
+        .catch(err => {
+          console.log('error from api', err)
         })
 
       console.log(article)  
