@@ -31,6 +31,14 @@ app.get("/news", (req, res) => {
   res.render("news");
 });
 
+app.get("/news", (req, res) => {
+  res.render("news")
+});
+
+app.get("/news-form", (req, res) => {
+  res.render("newsform")
+});
+
 // app.get("/*", (req, res) => {
 //   res.render("login")
 // });
