@@ -34,5 +34,4 @@ schema.methods.generateJWT = function generateJWT() {
 schema.plugin(uniqueValidator);
 
 const User = mongoose.model("User", schema);
-console.log("slama");
 module.exports = User;
