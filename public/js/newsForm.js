@@ -6,6 +6,7 @@ $(document).ready(function() {
 
       formData.title = $('.form-container-flex input[name="title"]').val();
       formData.author = $('.form-container-flex input[name="author"]').val();
+      formData.img = $('.form-container-flex input[name="img"]').val();
       formData.desc = $('.form-container-flex textarea[name="description"]').val();
 
 
