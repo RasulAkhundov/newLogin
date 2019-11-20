@@ -1,11 +1,13 @@
 const app = require("express")();
 const bodyParser = require("body-parser");
 const cors = require("cors");
+const Promise = require("bluebird");
 const mongoose = require("mongoose");
 
 // routerler
 const authRouter = require("./routes/auth");
 const newsRouter = require("./routes/news");
+mongoose.Promise = Promise;
 // resul salam
 // merge text
 // middleware
@@ -34,7 +36,12 @@ app.get("/news", (req, res) => {
 });
 
 app.get("/news-form", (req, res) => {
-  res.render("newsform")
+  res.render("newsform");
+});
+
+//newsFormEdit
+app.get("/news-form-edit", (req, res) => {
+  res.render("newsformedit");
 });
 
 // app.get("/*", (req, res) => {
@@ -47,7 +54,8 @@ mongoose.connect(
   "mongodb://localhost/breaking-news",
   {
     useNewUrlParser: true,
-    useUnifiedTopology: true
+    useUnifiedTopology: true,
+    useFindAndModify: false
   },
   () => console.log("mongodb is ready")
 );

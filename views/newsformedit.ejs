@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<% include ../parts/head %>
+
+<body>
+
+    <% include ../parts/header %>
+
+    <div class="form-container">
+
+        <div class="form-container-flex">
+
+            <div class="inline-inputs">
+                <label for="title">
+                    <span>Title</span>
+                    <input type="text" autocomplete="off" name="title-e" class="inp" id="title">
+                </label>
+                <label for="author">
+                    <span>Author</span>
+                    <input type="text" autocomplete="off" name="author-e" class="inp" id="author">
+                </label>
+            </div>
+
+            <label for="img">
+                <span>Image Url</span>
+                <input type="text" autocomplete="off" name="img-e" class="inp" id="img">
+            </label>
+
+            <label for="desc">
+                <span>Description</span>
+                <textarea name="description-e" id="desc" cols="30" rows="10"></textarea>
+            </label>
+
+            <button type="button" class="edit-btn">Edit article</button>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>
