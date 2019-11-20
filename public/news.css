@@ -84,6 +84,7 @@ header #singin {
   border-radius: 5px;
   margin: 15px;
   position: relative;
+  padding-bottom: 50px;
 }
 .card-container .X {
   position: absolute;
@@ -109,9 +110,13 @@ header #singin {
 }
 .card-container .image {
   width: 100%;
+  border-radius: 5px 5px 0 0;
 }
 .card-container .image img {
   width: 100%;
+  min-height: 210px;
+  max-height: 210px;
+  border-radius: 5px 5px 0 0;
 }
 .card-body {
   padding: 5px 10px 10px 10px;
@@ -133,6 +138,30 @@ header #singin {
 .card-body .about-news p {
   font-size: 14px;
   color: #151515;
+}
+.card-container .add-something {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+}
+.card-container .add-something a {
+  text-decoration: none;
+}
+.card-container .add-something i {
+  font-size: 30px;
+  background: rgb(236, 34, 34);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  border-radius: 50%;
+  color: white;
+  cursor: pointer;
 }
 .alert {
   width: 400px;

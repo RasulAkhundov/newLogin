@@ -26,6 +26,9 @@ $(document).ready(async function() {
             <p>${n.desc}</p>
         </div>
         </div>
+        <div class="add-something">
+          <a href="/news-form"><i class="fas fa-plus"></i></a>
+        </div>
         </div>
     `);
   });
