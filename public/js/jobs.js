@@ -1,16 +1,17 @@
 $(document).ready(async function() {
-    let jobs = await axios
+  let jobs = await axios
     .get("http://localhost:4004/api/get-jobs")
     .then(res => res.data.jobs);
 
-    jobs.map(j => {
-        $(".jobs-container").append(`
+  jobs.map(j => {
+    console.log(j);
+    $(".jobs-container").append(`
             <div class="job-box">
                 <div class="X" id="${j._id}">
                     <div class="line-1"></div>
                     <div class="line-2"></div>
                 </div>
-                <img src="${j.image}" alt="">
+                <img src="/routes/upload/${j.image}" alt="">
 
                 <div class="job-box-body">
                     <div class="is-adi box" style="display: flex;">
@@ -27,20 +28,20 @@ $(document).ready(async function() {
                     </div>
                 </div>
             </div>
-        `)
-    })
-    let jobsId = "";
-    $(".X").click(async function(e) {
-        jobsId = $(this).attr("id");
-        const res = await axios.delete(
-            `http://localhost:4004/api/delete-jobs/${jobsId}`
-        );
-        if(res.data.err) {
-        } else {
-            $(`.jobs-container div[id=${jobsId}]`)
-            .parent()
-            .remove();
-            alert("silim?")
-        }
-    })
-})
+        `);
+  });
+  let jobsId = "";
+  $(".X").click(async function(e) {
+    jobsId = $(this).attr("id");
+    const res = await axios.delete(
+      `http://localhost:4004/api/delete-jobs/${jobsId}`
+    );
+    if (res.data.err) {
+    } else {
+      $(`.jobs-container div[id=${jobsId}]`)
+        .parent()
+        .remove();
+      alert("silim?");
+    }
+  });
+});
