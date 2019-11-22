@@ -11,7 +11,7 @@ $(document).ready(function() {
     $(".edit-btn").click(async function() {
       formData.title = $('input[name="title-e"]').val();
       formData.author = $('input[name="author-e"]').val();
-      formData.img = $('input[name="img-e"]').val();
+      formData.image = $('input[name="img-e"]').val();
       formData.desc = $('textarea[name="description-e"]').val();
 
       await axios.put(

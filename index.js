@@ -7,7 +7,8 @@ const mongoose = require("mongoose");
 // routerler
 const authRouter = require("./routes/auth");
 const newsRouter = require("./routes/news");
-const jobsRouter = require("./routes/jobsRouter")
+const jobsRouter = require("./routes/jobsRouter");
+const contactRouter = require("./routes/contact");
 mongoose.Promise = Promise;
 // resul salam
 // merge text
@@ -23,6 +24,7 @@ console.log("salam");
 app.use("/api", authRouter);
 app.use("/api", newsRouter);
 app.use("/api", jobsRouter);
+app.use("/api", contactRouter);
 
 // tapilmayan routerler uchun
 app.get("/", (req, res) => {
@@ -49,7 +51,12 @@ app.get("/jobs-form", (req, res) => {
 //jobs
 app.get("/jobs", (req, res) => {
   res.render("jobs");
-})
+});
+
+//contact
+app.get("/contact", (req, res) => {
+  res.render("contact");
+});
 
 //newsFormEdit
 app.get("/news-form-edit", (req, res) => {
