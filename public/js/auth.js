@@ -26,7 +26,7 @@ $(document).ready(function() {
         .then(res => res.data);
       if (token.user) {
         localStorage.setItem("user", token.user);
-        window.location.href = "/login";
+        window.location.href = "/news";
       } else {
         console.log(token);
       }

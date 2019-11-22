@@ -1,0 +1,113 @@
+* {
+box-sizing: border-box;
+}
+html {
+width: 100%;
+height: 100%;
+}
+body {
+width: 100%;
+height: 100%;
+margin: 0;
+background: white;
+}
+header {
+width: 100%;
+display: flex;
+align-items: center;
+justify-content: space-between;
+padding: 0 30px;
+background: whitesmoke;
+}
+header h2 {
+font-size: 44px;
+color: rgb(236, 34, 34);
+}
+header h1 {
+font-size: 50px;
+color: #151515;
+}
+header ul {
+margin: 0;
+padding: 0;
+display: flex;
+}
+header ul li {
+list-style: none;
+text-decoration: none;
+font-size: 16px;
+margin-right: 20px;
+display: flex;
+align-items: center;
+}
+header ul li i {
+margin-right: 5px;
+font-size: 15px;
+}
+header ul li a {
+color: #151515;
+font-weight: 600;
+text-decoration: none;
+}
+header .header-links {
+display: flex;
+}
+header button {
+width: 100px;
+height: 40px;
+cursor: pointer;
+font-size: 16px;
+font-weight: 600;
+outline: none;
+}
+header button#logout {
+background: transparent !important;
+border: 2px solid rgb(236, 34, 34);
+border-radius: 5px;
+margin-right: 10px;
+}
+header #singup {
+background: transparent;
+border: 2px solid rgb(236, 34, 34);
+border-radius: 5px;
+margin-right: 10px;
+}
+header #singin {
+background: rgb(236, 34, 34);
+border: 2px solid whitesmoke;
+border-radius: 7px;
+margin-right: 10px;
+color: white;
+}
+.is-elani {
+    width: 100%;
+    height: calc(100% - 76px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.is-elani .form {
+    width: 400px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.is-elani .form input {
+    width: 350px;
+    height: 50px;
+    padding: 15px;
+    font-size: 17px;
+    margin-bottom: 20px;
+}
+.is-elani .form button {
+    width: 200px;
+    height: 50px;
+    font-size: 20px;
+    cursor: pointer;
+    background: whitesmoke;
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid silver;
+}

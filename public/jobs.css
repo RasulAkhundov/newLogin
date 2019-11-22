@@ -1,0 +1,137 @@
+* {
+    box-sizing: border-box;
+  }
+  html {
+    width: 100%;
+    height: 100%;
+  }
+  body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    background: white;
+  }
+  header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 30px;
+    background: whitesmoke;
+  }
+  header h2 {
+    font-size: 44px;
+    color: rgb(236, 34, 34);
+  }
+  header h1 {
+    font-size: 50px;
+    color: #151515;
+  }
+  header ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  header ul li {
+    list-style: none;
+    text-decoration: none;
+    font-size: 16px;
+    margin-right: 20px;
+    display: flex;
+    align-items: center;
+  }
+  header ul li i {
+    margin-right: 5px;
+    font-size: 15px;
+  }
+  header ul li a {
+    color: #151515;
+    font-weight: 600;
+    text-decoration: none;
+  }
+  header .header-links {
+    display: flex;
+  }
+  header button {
+    width: 100px;
+    height: 40px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    outline: none;
+  }
+  header button#logout {
+    background: transparent !important;
+    border: 2px solid rgb(236, 34, 34);
+    border-radius: 5px;
+    margin-right: 10px;
+  }
+  header #singup {
+    background: transparent;
+    border: 2px solid rgb(236, 34, 34);
+    border-radius: 5px;
+    margin-right: 10px;
+  }
+  header #singin {
+    background: rgb(236, 34, 34);
+    border: 2px solid whitesmoke;
+    border-radius: 7px;
+    margin-right: 10px;
+    color: white;
+  }
+.jobs-container {
+    width: 100%;
+    height: calc(100% - 76px);
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.jobs-container .job-box {
+    width: 400px;
+    border: 1px solid silver;
+    border-radius: 5px;
+    height: 400px;
+    margin: 10px;
+    position: relative;
+}
+.jobs-container .job-box .job-box-body {
+    padding: 10px;
+}
+.jobs-container .job-box img {
+    width: 100%;
+    height: 250px;
+}
+.jobs-container .job-box .box {
+    display: flex;
+    align-items: center;
+}
+.jobs-container .job-box h5 {
+    margin-right: 10px;
+}
+.jobs-container .job-box h2 {
+  font-size: 18px;
+}
+.jobs-container .job-box .X {
+  position: absolute;
+  top: 15px;
+  right: 5px;
+  cursor: pointer;
+}
+.jobs-container .job-box .X .line-1,
+.jobs-container .job-box .X .line-2 {
+  width: 30px;
+  height: 5px;
+  margin: 5px;
+  background: rgb(236, 34, 34);
+  border-radius: 50px;
+  cursor: pointer;
+}
+.jobs-container .job-box .X .line-1 {
+  transform: rotate(135deg);
+}
+.jobs-container .job-box .X .line-2 {
+  transform: rotate(-135deg);
+  position: absolute;
+  top: 0;
+}
