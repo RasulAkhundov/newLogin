@@ -11,7 +11,12 @@ $(document).ready(function() {
 
     let email = await axios
       .post("http://localhost:4004/api/post-contact", formData)
-      .then(res => res.data);
-    console.log(email);
+      .then(res => {
+        $("#name").val("");
+        $("#surname").val("");
+        $("#email").val("");
+        $("#text-box").val("");
+      });
+   
   });
 });
