@@ -11,7 +11,7 @@ $(document).ready(async function() {
                     <div class="line-1"></div>
                     <div class="line-2"></div>
                 </div>
-                <img src="/routes/upload/${j.image}" alt="">
+                <img src="/${j.image}" alt="image">
 
                 <div class="job-box-body">
                     <div class="is-adi box" style="display: flex;">

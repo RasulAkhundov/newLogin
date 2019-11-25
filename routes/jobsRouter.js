@@ -16,12 +16,12 @@ router.post("/create-jobs", (req, res) => {
     : mimType.slice(6, 9);
 
   const imageName = `uploadedimage-${Date.now()}`;
-
+  
   sharp(img)
-    .toFile(__dirname + `/upload/${imageName}.${ext}`)
+    .toFile(process.cwd() + `/public/upload/${imageName}.${ext}`)
     .then(data => {
       const jobs = new JobsModel({
-        image: imageName,
+        image: `upload/${imageName}.${ext}`,
         ad,
         tecrube,
         tarix,
