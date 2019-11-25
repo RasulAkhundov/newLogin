@@ -12,7 +12,6 @@ $(document).ready(function() {
   }
 })
 
-
 // jwt parse
 function parseJwt(token) {
   var base64Url = token.split(".")[1];
